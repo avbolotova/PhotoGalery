@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.photogalery.adapters.ViewPagerAdapter
 import com.example.photogalery.databinding.ActivityMainBinding
-import com.example.photogalery.fragments.Category
 import com.example.photogalery.fragments.Home
 import com.google.android.material.tabs.TabLayoutMediator
 import java.util.*
@@ -21,9 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding.tabLayoutId.tabRippleColor = null
         val adapter = ViewPagerAdapter(this)
         binding.viewpagerId.offscreenPageLimit = 2
-        val tableNames = arrayOf("Home","Category")
+        val tableNames = arrayOf("Unsplash photo")
         adapter.addFragment(Home(),tableNames[0])
-        adapter.addFragment(Category(),tableNames[1])
         binding.viewpagerId.adapter = adapter
         TabLayoutMediator(binding.tabLayoutId,binding.viewpagerId) { tab ,position ->
             tab.text = tableNames[position]

@@ -1,6 +1,7 @@
 package com.example.photogalery.services
 
 import com.example.photogalery.models.Photo
+import com.example.photogalery.models.User
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
